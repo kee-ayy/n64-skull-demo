@@ -11,7 +11,7 @@ jobs:
 
       - name: Compile ROM using Libdragon
         run: |
-          docker run --rm -v "$(pwd):/n64" -w /n64 ghcr.io/libdragon/libdragon make
+          docker run --rm -v "$(pwd):/n64" -w /n64 ghcr.io/dragonminded/libdragon:latest make
 
       - name: Store Compiled Z64 ROM
         uses: actions/upload-artifact@v4
